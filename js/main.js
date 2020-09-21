@@ -61,7 +61,7 @@
             }
         }
     };
-    var decoder = new WebCodeCamJS("#webcodecam-canvas").buildSelectMenu("#camera-select", "environment|back").init(args);
+    var decoder = new WebCodeCamJS("#webcodecam-canvas").buildSelectMenu("#camera-select", 2).init(args);
     decodeLocal.addEventListener("click", function() {
         // Page.decodeLocalImage();
 
