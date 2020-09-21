@@ -5,7 +5,7 @@
  * email: atandrastoth@gmail.com
  * Licensed under the MIT license
  */
-(function(undefined) {
+ (function(undefined) {
     "use strict";
 
     function Q(el) {
@@ -17,30 +17,30 @@
     }
     var txt = "innerText" in HTMLElement.prototype ? "innerText" : "textContent";
     var scannerLaser = Q(".scanner-laser"),
-        imageUrl = new Q("#image-url"),
-        play = Q("#play"),
-        scannedImg = Q("#scanned-img"),
-        scannedQR = Q("#scanned-QR"),
-        grabImg = Q("#grab-img"),
-        decodeLocal = Q("#decode-img"),
-        pause = Q("#pause"),
-        stop = Q("#stop"),
-        contrast = Q("#contrast"),
-        contrastValue = Q("#contrast-value"),
-        zoom = Q("#zoom"),
-        zoomValue = Q("#zoom-value"),
-        brightness = Q("#brightness"),
-        brightnessValue = Q("#brightness-value"),
-        threshold = Q("#threshold"),
-        thresholdValue = Q("#threshold-value"),
-        sharpness = Q("#sharpness"),
-        sharpnessValue = Q("#sharpness-value"),
-        grayscale = Q("#grayscale"),
-        grayscaleValue = Q("#grayscale-value"),
-        flipVertical = Q("#flipVertical"),
-        flipVerticalValue = Q("#flipVertical-value"),
-        flipHorizontal = Q("#flipHorizontal"),
-        flipHorizontalValue = Q("#flipHorizontal-value");
+    imageUrl = new Q("#image-url"),
+    play = Q("#play"),
+    scannedImg = Q("#scanned-img"),
+    scannedQR = Q("#scanned-QR"),
+    grabImg = Q("#grab-img"),
+    decodeLocal = Q("#decode-img"),
+    pause = Q("#pause"),
+    stop = Q("#stop"),
+    contrast = Q("#contrast"),
+    contrastValue = Q("#contrast-value"),
+    zoom = Q("#zoom"),
+    zoomValue = Q("#zoom-value"),
+    brightness = Q("#brightness"),
+    brightnessValue = Q("#brightness-value"),
+    threshold = Q("#threshold"),
+    thresholdValue = Q("#threshold-value"),
+    sharpness = Q("#sharpness"),
+    sharpnessValue = Q("#sharpness-value"),
+    grayscale = Q("#grayscale"),
+    grayscaleValue = Q("#grayscale-value"),
+    flipVertical = Q("#flipVertical"),
+    flipVerticalValue = Q("#flipVertical-value"),
+    flipHorizontal = Q("#flipHorizontal"),
+    flipHorizontalValue = Q("#flipHorizontal-value");
     var args = {
         autoBrightnessValue: 100,
         resultFunction: function(res) {
@@ -88,11 +88,15 @@
     };
     var decoder = new WebCodeCamJS("#webcodecam-canvas").buildSelectMenu("#camera-select", "environment|back").init(args);
     decodeLocal.addEventListener("click", function() {
-        Page.decodeLocalImage();
+        // Page.decodeLocalImage();
+
         decoder.buildSelectMenu("#camera-select",'environment|back');
+        decoder.play();
+
+
         // decoder.play();
         // $('#camera-select').on('change', function(){
-            decoder.stop().play();
+            // decoder.stop().play();
         // });
     }, false);
     play.addEventListener("click", function() {
