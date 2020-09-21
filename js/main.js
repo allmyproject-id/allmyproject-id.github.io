@@ -68,9 +68,9 @@
         decoder.buildSelectMenu("#camera-select",'environment|back');
         decoder.play();
 
-        $('#camera-select').on('change', function(){
-            decoder.stop().play();
-        });
+        // $('#camera-select').on('change', function(){
+        //     decoder.stop().play();
+        // });
     }, false);
     decoder.play();
 }).call(window.Page = window.Page || {});
