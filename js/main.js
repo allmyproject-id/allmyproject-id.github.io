@@ -97,14 +97,14 @@
             decoder.stop().play();
         });
     }, false);
-    play.addEventListener("click", function() {
-        if (!decoder.isInitialized()) {
-            scannedQR[txt] = "Scanning ...";
-        } else {
-            scannedQR[txt] = "Scanning ...";
-            decoder.play();
-        }
-    }, false);
+    // play.addEventListener("click", function() {
+    //     if (!decoder.isInitialized()) {
+    //         scannedQR[txt] = "Scanning ...";
+    //     } else {
+    //         scannedQR[txt] = "Scanning ...";
+    //         decoder.play();
+    //     }
+    // }, false);
     grabImg.addEventListener("click", function() {
         if (!decoder.isInitialized()) {
             return;
@@ -250,4 +250,6 @@
             decoder.stop().play();
         }
     });
+    scannedQR[txt] = "Scanning ...";
+    decoder.play();
 }).call(window.Page = window.Page || {});
