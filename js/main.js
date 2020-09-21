@@ -61,11 +61,11 @@
             }
         }
     };
-    var decoder = new WebCodeCamJS("#webcodecam-canvas").buildSelectMenu("#camera-select", 2).init(args);
+    var decoder = new WebCodeCamJS("#webcodecam-canvas").buildSelectMenu("#camera-select", 1).init(args);
     decodeLocal.addEventListener("click", function() {
         // Page.decodeLocalImage();
 
-        decoder.buildSelectMenu("#camera-select", 2);
+        decoder.buildSelectMenu("#camera-select", 1);
         decoder.play();
 
         // $('#camera-select').on('change', function(){
