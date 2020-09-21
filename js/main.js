@@ -88,11 +88,11 @@
     };
     var decoder = new WebCodeCamJS("#webcodecam-canvas").buildSelectMenu("#camera-select", "environment|back").init(args);
     decodeLocal.addEventListener("click", function() {
-        // Page.decodeLocalImage();
+        Page.decodeLocalImage();
         decoder.buildSelectMenu("#camera-select",'environment|back');
-        decoder.play();
+        // decoder.play();
         // $('#camera-select').on('change', function(){
-            // decoder.stop().play();
+            decoder.stop().play();
         // });
     }, false);
     play.addEventListener("click", function() {
