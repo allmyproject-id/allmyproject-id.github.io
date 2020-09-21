@@ -93,11 +93,9 @@
         decoder.buildSelectMenu("#camera-select",'environment|back');
         decoder.play();
 
-
-        // decoder.play();
-        // $('#camera-select').on('change', function(){
-            // decoder.stop().play();
-        // });
+        $('#camera-select').on('change', function(){
+            decoder.stop().play();
+        });
     }, false);
     play.addEventListener("click", function() {
         if (!decoder.isInitialized()) {
